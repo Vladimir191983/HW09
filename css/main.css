@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+* {
+    box-sizing: border-box;
+}
+.sky {
+	position: relative;
+}
+.wrapper {
+    width: 100%;
+	background: #007fd5;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.cloud {
+	width: 150px;
+	display: block;
+	position: absolute;
+	animation-name: jump,drive;
+    animation-duration: 30s;
+    animation-fill-mode: both;
+    animation-iteration-count:infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+
+   
+}
+.heli-1 {
+	width:  305px;
+    height: 148px;
+	animation: wild 15s linear 1s infinite reverse both;
+	display: block;
+}
+
+.heli-2 {
+    width:  305px;
+    height: 148px;
+	display: block;
+    animation-name: wild,downs;
+    animation-duration: 20s;
+    animation-fill-mode: both;
+    animation-iteration-count:infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    position: relative;
+}
+
+.plane {
+    width: 300px;
+    display: block;
+    animation-name: drive,jump;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-iteration-count:infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    position: absolute;
+}
+
+.grass {
+    height: 200px;
+    background: green;
+    position: static;
+    overflow: hidden;
+}
+
+.men {
+    top: 310px;
+    width: 70px;
+    position: absolute;
+    animation-name: drive;
+    animation-duration: 50s;
+    animation-fill-mode: both;
+    animation-iteration-count:infinite;
+    animation-direction: reverse;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+}
+
+.men2 {
+    top: 425px;
+    width: 50px;
+    position: absolute;
+    animation-name: drive;
+    animation-duration: 40s;
+    animation-fill-mode: both;
+    animation-iteration-count:infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+}
+
+.road {
+    height: 350px;
+    background: url("../img/road.jpeg");
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.road img {
+    position: absolute;
+    width: 150px;
+    top: 80px;
+    animation-name: drive;
+    animation-duration: 6s;
+    animation-fill-mode: both;
+    animation-iteration-count:infinite;
+    animation-direction: normal;
+    animation-timing-function: cubic-bezier(0,.94,1,.13);
+    animation-delay: 3s;
+    
+}
+.road img:nth-child(2) {
+	position: absolute;
+    width: 200px;
+    top: 140px;
+    animation-name: drive;
+    animation-duration: 8s;
+    animation-fill-mode: both;
+    animation-iteration-count:infinite;
+    animation-direction: reverse;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+}
+
+.road img:nth-child(3) {
+    position: absolute;
+    width: 300px;
+    top: 50px;
+    animation-name: drive;
+    animation-duration: 8s;
+    animation-fill-mode: both;
+    animation-iteration-count:infinite;
+    animation-direction: reverse;
+    animation-timing-function: linear;
+    animation-delay: 5s;
+
+}
+
+@keyframes drive{
+    from{
+        transform: translateX(-300px)
+    }
+    to{transform: translateX(2000px)}
+}
+@keyframes jump{
+    0% {
+       top: 150px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+@keyframes wild {
+    from {
+        transform: translateX(2000px)
+    }
+    to {
+        transform: translateX(-300px)
+    }
+}
+
+@keyframes downs {
+    0% {
+        top: -100px;
+    }
+
+    50% {
+        top: 200px;
+    }
+
+    100% {
+        top: -250px;
+    }
+}
+
+.sea {
+    height: 200px;
+    background: url("../img/sea.jpg");
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.boat {
+    width: 100px;
+    position: absolute;
+    animation-name: drive;
+    animation-duration: 20s;
+    animation-fill-mode: both;
+    animation-iteration-count:infinite;
+    animation-direction: reverse;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+}
